@@ -1,10 +1,12 @@
-// script.js
-
-// Selecionar o botão de alternância de tema
-const toggleButton = document.getElementById('toggle-theme');
-
-// Função para alternar entre modo claro e escuro
-toggleButton.addEventListener('click', () => {
-  // Alternar a classe 'dark' no elemento <html> (isso ativa/desativa o modo escuro)
-  document.documentElement.classList.toggle('dark');
-});
+// On page load or when changing themes, best to add inline in `head` to avoid FOUC
+document.documentElement.classList.toggle(
+    "dark",
+    localStorage.theme === "dark" ||
+      (!("theme" in localStorage) && window.matchMedia("(prefers-color-scheme: dark)").matches),
+  );
+  // Whenever the user explicitly chooses light mode
+  localStorage.theme = "light";
+  // Whenever the user explicitly chooses dark mode
+  localStorage.theme = "dark";
+  // Whenever the user explicitly chooses to respect the OS preference
+  localStorage.removeItem("theme");
