@@ -13,6 +13,10 @@ function toggleTheme() {
 const toggleButton = document.getElementById('theme-toggle');
   toggleButton.addEventListener('click', toggleTheme);
   
+
+
+
+
 const addTaskButton = document.getElementById('input-btn');
 const taskInput = document.getElementById('input-box');
 const todoList = document.getElementById('todo-list');
@@ -21,26 +25,29 @@ addTaskButton.addEventListener('click', () => {
     const taskText = taskInput.value.trim();
     
     if (taskText !== "") {
-        // Criação de uma nova tarefa
+        // cria nova tarefa
         const taskElement = document.createElement('div');
         taskElement.classList.add('flex', 'items-center', 'space-x-2', 'mb-2');
 
-         // Criação do checkbox
+        // cria checkbox
         const checkbox = document.createElement('input');
         checkbox.type = 'checkbox';
-        checkbox.classList.add('h-5', 'w-5', 'text-blue-500', 'rounded');
+        checkbox.classList.add('h-4', 'w-4', 'text-blue-500', 'rounded', 'cursor-pointer');
 
-        // Criação do texto da tarefa
-        const taskTextElement = document.createElement('span');
-        taskTextElement.classList.add('text-gray-800', 'text-lg');
+        // cria o texto da tarefa
+        const taskTextElement = document.createElement('p');
+        taskTextElement.classList.add('text-gray-800', 'font-medium', 'dark:text-gray-300');
         taskTextElement.textContent = taskText;
-        // Adiciona os elementos ao DOM
+
+        // Adiciona um elemento dentro do outro
         taskElement.appendChild(checkbox);
         taskElement.appendChild(taskTextElement);
         todoList.appendChild(taskElement);
-        // Limpa o campo de entrada
+
+        // LIMPA O INPUT
         taskInput.value = '';
-        // Evento para marcar/desmarcar a tarefa
+
+        // Marca e desmarca tarefas
         checkbox.addEventListener('change', () => {
             if (checkbox.checked) {
                 taskTextElement.classList.add('line-through', 'text-gray-400');
