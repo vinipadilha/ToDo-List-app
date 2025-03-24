@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To-Do List</title>
     <link rel="stylesheet" href="./src/output.css">
 </head>
+
 <body class="bg-gray-50 dark:bg-gray-900">
 
-    
-    <div class="w-full h-screen flex flex-col items-center justify-center bg-gray-50 dark:bg-gray-900">
-        
-        <div class="w-full max-w-sm p-6 bg-white border border-gray-200 rounded-t-2xl shadow-md dark:bg-gray-800 dark:border-gray-700 flex flex-col h-auto">
+    <div class="w-full h-screen flex flex-col items-center justify-start bg-gray-50 dark:bg-gray-900 ">
 
-            
+        
+        <div class="w-full max-w-sm p-6 bg-white border-x-1 border-t border-gray-200 rounded-t-3xl shadow-md dark:bg-gray-800 dark:border-gray-700 flex flex-col h-auto mt-20">
             <div class="flex justify-between items-center mb-6">
                 <h1 class="text-2xl font-semibold text-gray-900 dark:text-white">To Do List</h1>
                 <button type="button" id="theme-toggle" class="cursor-pointer text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">
@@ -21,23 +21,23 @@
                 </button>
             </div>
 
-            
-            <div class="flex items-center justify-between space-x-5">
+            <div class="flex items-center justify-between space-x-6">
                 <input type="text" id="input-box" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring-2" placeholder="Adicione sua tarefa">
                 <button type="button" id="input-btn" class="cursor-pointer text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">
                     Adicionar
                 </button>
             </div>
+        </div>
 
         
+        <div id="todo-list" class="w-full max-w-sm p-6 bg-white border-x-1 border-b border-gray-200 rounded-b-3xl shadow-md dark:bg-gray-800 dark:border-gray-700 flex flex-col flex-grow overflow-y-auto">
+            <!-- As tarefas serão adicionadas dinamicamente aqui -->
         </div>
 
-        <div class="w-full max-w-sm p-6 bg-white border border-gray-200 rounded-b-2xl shadow-md dark:bg-gray-800 dark:border-gray-700 flex flex-col h-auto">
-
-        </div>
     </div>
 
     <script src="script.js"></script>
 
 </body>
+
 </html>
