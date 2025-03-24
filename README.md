@@ -1,7 +1,7 @@
 
 # To-Do List
 
-# Descrição
+## Descrição
 A **To-Do List** é uma aplicação simples de gerenciamento de tarefas. O usuário pode adicionar, marcar como concluída e excluir tarefas da lista. A interface também suporta a alternância entre temas claro e escuro.
 
 
