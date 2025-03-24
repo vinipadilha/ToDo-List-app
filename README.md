@@ -4,6 +4,9 @@
 ## Descrição
 A **To-Do List** é uma aplicação simples de gerenciamento de tarefas. O usuário pode adicionar, marcar como concluída e excluir tarefas da lista. A interface também suporta a alternância entre temas claro e escuro.
 
+## Capturas de tela
+<img src="/screenshot/img1.png"/>
+<img src="/screenshot/img2.png"/>
 
 ## Funcionalidades
 
